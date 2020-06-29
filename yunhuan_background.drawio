@@ -1,37 +1,61 @@
-<mxfile host="app.diagrams.net" modified="2020-05-27T05:21:57.897Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36" etag="G2YMUg1SeXEEE98cSTJO" version="13.1.3" type="github">
+<mxfile host="app.diagrams.net" modified="2020-06-29T03:09:35.388Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36" etag="2gwyVtnUzWSNsHV8s5Fw" version="13.1.3" type="github">
   <diagram id="dvXGsRnJWB8gbnkpLMBo" name="Page-1">
-    <mxGraphModel dx="875" dy="536" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="875" dy="5217" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="JokFo_8oz-sf4rnF7_rB-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="JokFo_8oz-sf4rnF7_rB-1" target="JokFo_8oz-sf4rnF7_rB-5">
+        <mxCell id="JokFo_8oz-sf4rnF7_rB-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="JokFo_8oz-sf4rnF7_rB-1" target="JokFo_8oz-sf4rnF7_rB-5" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="540" y="70" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="JokFo_8oz-sf4rnF7_rB-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="JokFo_8oz-sf4rnF7_rB-1" target="JokFo_8oz-sf4rnF7_rB-9">
+        <mxCell id="JokFo_8oz-sf4rnF7_rB-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="JokFo_8oz-sf4rnF7_rB-1" target="JokFo_8oz-sf4rnF7_rB-9" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="JokFo_8oz-sf4rnF7_rB-1" value="main" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="JokFo_8oz-sf4rnF7_rB-1" value="main" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="70" y="40" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="JokFo_8oz-sf4rnF7_rB-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JokFo_8oz-sf4rnF7_rB-5" target="JokFo_8oz-sf4rnF7_rB-7">
+        <mxCell id="JokFo_8oz-sf4rnF7_rB-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="JokFo_8oz-sf4rnF7_rB-5" target="JokFo_8oz-sf4rnF7_rB-7" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="JokFo_8oz-sf4rnF7_rB-5" value="1.初始化redis&lt;br&gt;2.初始化socket服务端&lt;br&gt;3.有IOnode节点连接时获取并开启保持其生命周期的进程" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="JokFo_8oz-sf4rnF7_rB-5" value="1.初始化redis&lt;br&gt;2.初始化socket服务端&lt;br&gt;3.监听客户端，有客户端发起连接后开启对应的守护进程" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="274" y="20" width="140" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="JokFo_8oz-sf4rnF7_rB-7" value="暂是不需要处理其他类型的socket客户端，因为本项目暂时没有这种需求" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="494" y="20" width="140" height="100" as="geometry" />
+        <mxCell id="JokFo_8oz-sf4rnF7_rB-7" value="有IOnode节点连接时获取并开启保持其生命周期的携程，携程暂时不需要处理（没有设计对应的处理器）其他类型的socket客户端，如用户，消息，因为本项目暂时没有这种需求" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="494" y="-25" width="266" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="JokFo_8oz-sf4rnF7_rB-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JokFo_8oz-sf4rnF7_rB-9" target="JokFo_8oz-sf4rnF7_rB-11">
+        <mxCell id="JokFo_8oz-sf4rnF7_rB-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="JokFo_8oz-sf4rnF7_rB-9" target="JokFo_8oz-sf4rnF7_rB-11" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="JokFo_8oz-sf4rnF7_rB-9" value="&lt;div style=&quot;color: rgb(212 , 212 , 212) ; background-color: rgb(30 , 30 , 30) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px ; line-height: 19px&quot;&gt;&lt;span style=&quot;color: #dcdcaa&quot;&gt;ProcessKeeper&lt;/span&gt;()&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="JokFo_8oz-sf4rnF7_rB-9" value="&lt;div style=&quot;font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-size: 14px; line-height: 19px;&quot;&gt;&lt;font&gt;startProcess&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="70" y="297.5" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="JokFo_8oz-sf4rnF7_rB-11" value="1.实例化&lt;span style=&quot;background-color: rgb(30 , 30 , 30) ; color: rgb(212 , 212 , 212) ; font-family: &amp;#34;droid sans mono&amp;#34; , monospace , monospace , &amp;#34;droid sans fallback&amp;#34; ; font-size: 14px&quot;&gt;utils.connTransfer结构体&lt;br&gt;2.调用其相关方法判断应该使用哪种解析器解析数据&lt;br&gt;3.使用解析器解析数据&lt;br&gt;4.基于解析结果生成msg，并反序列化msg&lt;br&gt;5.更新msg至redis&lt;br&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="250" y="237.5" width="369" height="180" as="geometry" />
+        <mxCell id="JokFo_8oz-sf4rnF7_rB-11" value="&lt;span style=&quot;font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-size: 14px;&quot;&gt;processKeeper()是processRoute实体的方法，&lt;br&gt;&lt;br&gt;processRoute实体在函数startProcess内创建，&lt;br&gt;&lt;br&gt;startProcess是携程函数，每一个新的客户端请求都会对应&lt;br&gt;&lt;br&gt;一个独立的startprocess()携程&lt;br&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;fontColor=#000000;" parent="1" vertex="1">
+          <mxGeometry x="250" y="194" width="430" height="267" as="geometry" />
+        </mxCell>
+        <mxCell id="7K-qaFqnbJk-Yph1IfBK-1" value="&lt;span&gt;1.实例化&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-size: 14px;&quot;&gt;utils.connTransfer结构体&lt;br&gt;2.调用其相关方法判断应该使用哪种解析器解析数据&lt;br&gt;3.使用解析器解析数据&lt;br&gt;4.基于解析结果生成msg，并反序列化msg&lt;br&gt;5.更新msg至redis&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;fontColor=#000000;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="295" y="510" width="340" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="7K-qaFqnbJk-Yph1IfBK-2" value="processKeeper" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="61.25" y="630" width="170" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="7K-qaFqnbJk-Yph1IfBK-3" value="&lt;div style=&quot;font-family: &amp;quot;droid sans mono&amp;quot;, monospace, monospace, &amp;quot;droid sans fallback&amp;quot;; font-size: 14px; line-height: 19px;&quot;&gt;&lt;span style=&quot;&quot;&gt;assertionAndProcessMes&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="50" y="990" width="212.5" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="7K-qaFqnbJk-Yph1IfBK-4" value="processKeeper()和assertionAndProcessMes()都是processer实体的方法，区别在于assertionAndProcessMes()是被processKeeper()函数在其函数体内部调用的" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;fillColor=#FFFFFF;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="335" y="900" width="540" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="7K-qaFqnbJk-Yph1IfBK-6" value="assertionAndProcessMes内switch" style="rhombus;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;fillColor=#FFFFFF;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="52.5" y="1280" width="210" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="7K-qaFqnbJk-Yph1IfBK-7" value="根据mes包内Type字段不懂开启不同的分支，并启动不同的处理器&lt;br&gt;&lt;font color=&quot;#ff0000&quot;&gt;注意：处理器已经不属于当前package内的实体了，而是属于逻辑上更内层的process包内的结构体&lt;br&gt;switch分支内同样会调用与需求所对应的process实体的方法&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=#ffffff;fillColor=#FFFFFF;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="335" y="1220" width="545" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="7K-qaFqnbJk-Yph1IfBK-10" value="" style="endArrow=none;html=1;labelBackgroundColor=#000000;strokeColor=#000000;fontColor=#000000;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="40" y="1200" as="sourcePoint" />
+            <mxPoint x="1596" y="1200" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
